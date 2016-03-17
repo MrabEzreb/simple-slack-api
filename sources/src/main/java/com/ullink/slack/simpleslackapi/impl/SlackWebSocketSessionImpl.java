@@ -120,7 +120,7 @@ class SlackWebSocketSessionImpl extends AbstractSlackSessionImpl implements Slac
                 return channel;
             }
         }
-        SlackMessageHandle<SlackChannelReply> reply = openDirectMessageChannel(user);
+        SlackMessageHandle<SlackReplyImpl> reply = openDirectMessageChannel(user);
         return reply.getReply().getSlackChannel();
     }
 
