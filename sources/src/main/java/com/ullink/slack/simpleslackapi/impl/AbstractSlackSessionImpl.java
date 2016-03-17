@@ -178,13 +178,13 @@ abstract class AbstractSlackSessionImpl implements SlackSession
     @Override
     public SlackMessageHandle<SlackMessageReply> sendMessage(SlackChannel channel, String message, SlackAttachment attachment, boolean unfurl)
     {
-        return sendMessage(channel, message, attachment, DEFAULT_CONFIGURATION, unfurl);
+        return sendMessage(channel, message, new SlackAttachment[]{attachment}, DEFAULT_CONFIGURATION, unfurl);
     }
 
     @Override
     public SlackMessageHandle<SlackMessageReply> sendMessage(SlackChannel channel, String message, SlackAttachment attachment, SlackChatConfiguration chatConfiguration)
     {
-        return sendMessage(channel, message, attachment, chatConfiguration, DEFAULT_UNFURL);
+        return sendMessage(channel, message, new SlackAttachment[]{attachment}, chatConfiguration, DEFAULT_UNFURL);
     }
 
     @Override
