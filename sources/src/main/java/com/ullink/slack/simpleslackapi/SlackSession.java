@@ -56,7 +56,7 @@ public interface SlackSession {
 
     SlackMessageHandle<SlackMessageReply> deleteMessage(String timeStamp, SlackChannel channel);
 
-    SlackMessageHandle<SlackMessageReply> sendMessage(SlackChannel channel, String message, SlackAttachment attachment, SlackChatConfiguration chatConfiguration, boolean unfurl);
+    SlackMessageHandle<SlackMessageReply> sendMessage(SlackChannel channel, String message, SlackAttachment[] attachment, SlackChatConfiguration chatConfiguration, boolean unfurl);
 
     SlackMessageHandle<SlackMessageReply> sendMessage(SlackChannel channel, String message, SlackAttachment attachment, SlackChatConfiguration chatConfiguration);
 
